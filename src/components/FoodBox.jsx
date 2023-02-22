@@ -6,18 +6,18 @@
 import { Card, Row, Col, Divider, Input, Button } from 'antd'
 
 // Iteration 2
-function FoodBox({food}) {
+function FoodBox({foodProps}) {
   return (
     <Col>
       <Card
-        title={food.name}
+        title={foodProps.name}
         style={{ width: 230, height: 300, margin: 10 }}
       >
-        <img src={food.image} height={60} alt="food" />
-        <p>Calories: {food.calories}</p>
-        <p>Servings: {food.servings}</p>
+        <img src={foodProps.image} height={60} alt="food" />
+        <p>Calories: {foodProps.calories}</p>
+        <p>Servings: {foodProps.servings}</p>
         <p>
-          <b>Total Calories: {food.calories * food.servings} </b> kcal
+          <b>Total Calories: {foodProps.calories * foodProps.servings} </b> kcal
         </p>
         <Button type="primary"> Delete </Button>
       </Card>

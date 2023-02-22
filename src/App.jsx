@@ -14,15 +14,9 @@ function App() {
       {/* Display Search component here */}
 
       <Divider>Food List</Divider>
-      <FoodBox
-        food={{
-          name: 'Orange',
-          calories: 85,
-          image: 'https://i.imgur.com/abKGOcv.jpg',
-          servings: 1,
-        }}
-      />
 
+      <Row style={{ width: '100%', justifyContent: 'center' }}>
+        {/* Render the list of Food Box components here */}
       {/*{foodsState.map((food) => {
         return (
           <div>
@@ -31,10 +25,19 @@ function App() {
           </div>)
       }
       )}*/}
-
-      <Row style={{ width: '100%', justifyContent: 'center' }}>
-        {/* Render the list of Food Box components here */}
-
+      {/*<FoodBox
+        food={{
+          name: 'Orange',
+          calories: 85,
+          image: 'https://i.imgur.com/abKGOcv.jpg',
+          servings: 1,
+        }}
+      />*/}
+      {foodsState.map((food) => {
+        return (
+          <FoodBox foodProps={food} />
+        )
+      })}
       </Row>
 
     </div>
